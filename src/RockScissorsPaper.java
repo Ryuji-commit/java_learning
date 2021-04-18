@@ -76,7 +76,7 @@ public class RockScissorsPaper {
             return true;
         }
 
-        if (cpu_hand > player_hand) {
+        if (cpu_hand == player_hand + 1) {
             return true;
         }
 
