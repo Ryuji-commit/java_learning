@@ -1,3 +1,4 @@
+package RockScissors;
 public class App {
     public static void main(String[] args) throws Exception {
         RockScissorsPaper game = new RockScissorsPaper();

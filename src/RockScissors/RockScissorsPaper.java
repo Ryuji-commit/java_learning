@@ -1,3 +1,4 @@
+package RockScissors;
 import java.util.*;
 
 enum Hands {
