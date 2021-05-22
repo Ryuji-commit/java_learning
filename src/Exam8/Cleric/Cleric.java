@@ -16,6 +16,10 @@ public class Cleric {
         this.mp = mp;
     }
 
+    public Cleric() {
+        this("TestUser", null, 250, 50);
+    }
+
     public void selfAid() {
         if (this.mp < 10) {
             System.out.println("MPが足りません！");
@@ -28,10 +32,15 @@ public class Cleric {
 
     public int pray(int seconds) {
         System.out.println(this.name + "は" + seconds + "秒間祈った!");
-        int logicallyRecover = seconds + new Random().nextInt(3) + this.cane.additionalEfectHeal;
+        int logicallyRecover = seconds + new Random().nextInt(3);
+        String effectedLog = "";
+        if (this.cane != null) {
+            logicallyRecover += this.cane.additionalEfectHeal;
+            effectedLog = this.cane.name + "の効果により";
+        }
         int recoveredMp = Math.min(this.MAX_MP - this.mp, logicallyRecover);
         this.mp += recoveredMp;
-        System.out.println(this.cane.name + "の効果により" + "MPが" + recoveredMp + "回復!");
+        System.out.println(effectedLog + "MPが" + recoveredMp + "回復!");
         return recoveredMp;
     }
 }

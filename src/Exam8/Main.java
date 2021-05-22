@@ -6,8 +6,10 @@ public class Main {
     public static void main(String[] args) {
         Cane cane = new Cane("魔法の杖", 100, 5);
         Cleric priest = new Cleric("priest A", cane, 500, 100);
+        Cleric priestB = new Cleric();
 
         priest.selfAid();
         priest.pray(3);
+        priestB.pray(3);
     }
 }
