@@ -12,6 +12,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        /*
         int baseHp = 25;
         Thief t = new Thief("アサカ", baseHp);
         System.out.println(baseHp + ":" + t.hp);
@@ -20,5 +21,10 @@ public class Main {
         // 25:35と表示されるはず
         // クラス型変数は確保したメモリの先頭アドレスを保持するため
         System.out.println(baseHp + ":" + t.hp);
+        */
+
+        Ninja n = new Ninja();
+        n.printStates();
+        n.throwWeapon();
     }
 }

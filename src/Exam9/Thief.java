@@ -18,4 +18,13 @@ public class Thief {
     public Thief(String name) {
         this(name, 45);
     }
+
+    public void printName() {
+        System.out.print(this.name);
+    }
+
+    public void printStates() {
+        System.out.println("HP: " + this.hp);
+        System.out.println("MP: " + this.mp);
+    }
 }
