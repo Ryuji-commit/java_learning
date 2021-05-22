@@ -3,11 +3,18 @@ import java.util.Random;
 
 public class Cleric {
     public String name;
-    public Exam8.Cleric.Cane cane;
-    int hp = 500;
+    public Cane cane;
+    int hp;
     final int MAX_HP = 500;
-    int mp = 100;
+    int mp;
     final int MAX_MP = 100;
+
+    public Cleric(String name, Cane cane, int hp, int mp) {
+        this.name = name;
+        this.cane = cane;
+        this.hp = hp;
+        this.mp = mp;
+    }
 
     public void selfAid() {
         if (this.mp < 10) {
@@ -24,7 +31,7 @@ public class Cleric {
         int logicallyRecover = seconds + new Random().nextInt(3) + this.cane.additionalEfectHeal;
         int recoveredMp = Math.min(this.MAX_MP - this.mp, logicallyRecover);
         this.mp += recoveredMp;
-        System.out.println("MPが" + recoveredMp + "回復!");
+        System.out.println(this.cane.name + "の効果により" + "MPが" + recoveredMp + "回復!");
         return recoveredMp;
     }
 }

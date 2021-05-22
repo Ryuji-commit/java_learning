@@ -4,15 +4,8 @@ import Exam8.Cleric.*;
 
 public class Main {
     public static void main(String[] args) {
-        Cleric priest = new Cleric();
-
-        Cane cane = new Cane();
-        cane.setName("魔法の杖");
-        cane.setInteger(100);
-        cane.setAdditionalEfect(5);
-
-        priest.name = "priest A";
-        priest.cane = cane;
+        Cane cane = new Cane("魔法の杖", 100, 5);
+        Cleric priest = new Cleric("priest A", cane, 500, 100);
 
         priest.selfAid();
         priest.pray(3);

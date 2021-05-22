@@ -5,15 +5,9 @@ public class Cane {
     int integer;
     int additionalEfectHeal;
 
-    public void setName(String name) {
+    public Cane(String name, int integer, int additionalEfectHeal) {
         this.name = name;
-    }
-
-    public void setInteger(int integer) {
         this.integer = integer;
-    }
-
-    public void setAdditionalEfect(int efect) {
-        this.additionalEfectHeal = efect;
+        this.additionalEfectHeal = additionalEfectHeal;
     }
 }
