@@ -1,6 +1,6 @@
 package Exam10.Hero;
 
-public abstract class Character {
+public abstract class Character implements Human {
     String name;
     public int hp;
 
