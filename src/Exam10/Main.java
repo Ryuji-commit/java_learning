@@ -5,7 +5,7 @@ import Exam10.Monster.*;
 
 public class Main {
     public static void main(String[] args) {
-        Hero h = new Hero("ミナト", 100);
+        Hero h = new Hero("ミナト", 100, 10);
         PoisonMatango a = new PoisonMatango('A');
         Matango b = new Matango('B');
         a.attack(h);
