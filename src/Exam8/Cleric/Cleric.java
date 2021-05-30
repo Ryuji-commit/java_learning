@@ -38,7 +38,7 @@ public class Cleric {
             logicallyRecover += this.cane.additionalEfectHeal;
             effectedLog = this.cane.name + "の効果により";
         }
-        int recoveredMp = Math.min(this.MAX_MP - this.mp, logicallyRecover);
+        int recoveredMp = Math.min(Cleric.MAX_MP - this.mp, logicallyRecover);
         this.mp += recoveredMp;
         System.out.println(effectedLog + "MPが" + recoveredMp + "回復!");
         return recoveredMp;
