@@ -6,7 +6,7 @@ public class Hero extends Character{
     }
 
     public void attack() {
-        System.out.println("Hero " + this.getName() + "の攻撃！");
+        System.out.println("Hero " + this.getName() + "の攻撃！\n" + this.getWeapon().getAtk() + "のダメージ");
     }
 
     public void run() {

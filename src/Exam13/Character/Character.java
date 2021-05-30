@@ -22,6 +22,7 @@ public abstract class Character implements Human {
     public void setHp(int hp) {this.hp = hp;}
     public void setMp(int mp) {this.mp = mp;}
     public void setName(String name) {this.name = name;}
+    public void setWeapon(Weapon weapon) {this.weapon = weapon;}
 
     public abstract void attack();
 }

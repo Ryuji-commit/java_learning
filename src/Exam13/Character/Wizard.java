@@ -3,19 +3,21 @@ package Exam13.Character;
 import Exam13.Weapon.*;
 
 public class Wizard extends Character{
-    private Wand wand;
-
     public Wizard(String name, int hp, int mp) {
         super(name, hp, mp);
     }
 
-    public void setWeapon(Wand wand) {
-        this.wand = wand;
-    }
-
     public void heal(Character character) {
+        Wand wand;
+        int recovPoint;
         int basePoint = 10;
-        int recovPoint = (int)(basePoint * this.wand.getRecovPower());
+        try {
+            wand = (Wand)this.getWeapon();
+            recovPoint = (int)(basePoint * wand.getRecovPower());
+        } catch (Exception e) {
+            System.out.println(this.getName() + "は杖を装備していません！");
+            return;
+        }
         character.setHp(character.getHp() + recovPoint);
         System.out.println(character.getName() + "のHPを" + recovPoint + "回復した！");
     }
