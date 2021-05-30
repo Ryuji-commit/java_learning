@@ -13,7 +13,18 @@ public class Weapon {
     public int getNowDurable() {return this.nowDurable;}
     public int getMaxDurable() {return this.maxDurable;}
 
-    public void setName(String name) {this.name = name;}
+    public Weapon(String name, int atk, int mtk) {
+        this.setName(name);
+        this.setAtk(atk);
+        this.setMtk(mtk);
+    }
+
+    public void setName(String name) {
+        if (name.length() < 3) {
+            throw new IllegalArgumentException("武器は3文字以上である必要があります");
+        }
+        this.name = name;
+    }
     public void setAtk(int atk) {this.atk = atk;}
     public void setMtk(int mtk) {this.mtk = mtk;}
 }
