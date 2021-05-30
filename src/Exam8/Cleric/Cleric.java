@@ -5,9 +5,9 @@ public class Cleric {
     public String name;
     public Cane cane;
     int hp;
-    final int MAX_HP = 500;
+    static final int MAX_HP = 500;
     int mp;
-    final int MAX_MP = 100;
+    static final int MAX_MP = 100;
 
     public Cleric(String name, Cane cane, int hp, int mp) {
         this.name = name;
